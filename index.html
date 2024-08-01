@@ -22,7 +22,36 @@ body {
 <style data-styled="active" data-styled-version="6.1.12">.oFocG{height:100%;width:100%;display:grid;gap:2vmin;grid-template-columns:1fr 4fr;grid-template-areas:'indicator controls';}.tvZWW{height:100%;width:100%;border:2px solid black;grid-area:indicator;background-color:#FFF;}.bHMKfD{height:100%;width:100%;display:flex;flex-direction:column;gap:4px;grid-area:controls;}.fTlThF{height:100%;width:100%;border:2px solid black;display:grid;place-items:center;font-weight:800;font-size:2em;color:#F00;background-color:#F002;}.YxmHN{height:100%;width:100%;border:2px solid black;display:grid;place-items:center;font-weight:800;font-size:2em;color:#0F0;background-color:#0F02;}.gpvKwJ{height:100%;width:100%;border:2px solid black;display:grid;place-items:center;font-weight:800;font-size:2em;color:#00F;background-color:#00F2;}</style>
   </head>
   <body>
-    <div id="root"><div class="sc-braxZu oFocG"><div color="#FFF" class="sc-gJhJTp tvZWW"></div><div class="sc-elDIKY bHMKfD"><div color="#F00" class="sc-fQpRED fTlThF">Press</div><div color="#0F0" class="sc-fQpRED YxmHN">Press</div><div color="#00F" class="sc-fQpRED gpvKwJ">Press</div><input type="text"></div></div></div>
+    <script>
+      function setColor(color) {
+        document.getElementById("indicator").style.backgroundColor = color;
+      }
+    </script>
+    <div id="root">
+      <div class="sc-braxZu oFocG">
+        <div id="indicator" color="#FFF" class="sc-gJhJTp tvZWW">
+
+        </div>
+      <div class="sc-elDIKY bHMKfD">
+        <div
+          color="#F00"
+          class="sc-fQpRED fTlThF"
+          onclick="setColor('#F00')"
+        >Press</div>
+        <div
+          color="#0F0"
+          class="sc-fQpRED YxmHN"
+          onclick="setColor('#0F0')"
+        >Press</div>
+        <div
+          color="#00F"
+          class="sc-fQpRED gpvKwJ"
+          onclick="setColor('#00F')"
+        >Press</div>
+        <input type="text">
+      </div>
+    </div>
+  </div>
   
 
 </body>
